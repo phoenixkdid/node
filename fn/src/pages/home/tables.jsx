@@ -37,7 +37,7 @@ export default function DataGridDemo({ update }) {
         const token = JSON.parse(localStorage.getItem('userToken')) // token bisa didapat dari localStorage atau tempat penyimpanan yang sesuai
         setAuthToken(token?.token) // set header Authorization Bearer menggunakan token yang disimpan
         apiRequest
-            .get('http://localhost:5000/get-session')
+            .get(`${process.env.NEXT_PUBLIC_API_URL}get-session`)
             .then((response) => {
                 const data = response?.data?.data
                 setRowGrid(data)

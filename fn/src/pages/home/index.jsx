@@ -78,7 +78,7 @@ export default function Index() {
     const SoketIo = async () => {
         const X = localStorage?.getItem('userToken')
         const ObjX = JSON.parse(X)
-        const socket = io(`http://localhost:5000`, {
+        const socket = io(`${process.env.NEXT_PUBLIC_API_URL}`, {
             auth: { token: ObjX?.token },
         })
         console.log(socket)

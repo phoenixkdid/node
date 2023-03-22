@@ -1,16 +1,8 @@
-// import { Sequelize } from 'sequelize'
-
-// const db = new Sequelize('wa_gateway', 'root', '', {
-//     host: 'localhost',
-//     dialect: 'mysql',
-// })
-
-// export default db
 import { Sequelize } from 'sequelize'
 
-const db = new Sequelize({
-    dialect: 'sqlite',
-    storage: './config/database.sqlite',
+const db = new Sequelize('api_sessions', 'api_sessions', 'ganteng123@~', {
+    host: 'localhost',
+    dialect: 'mysql',
 })
 
 export default db

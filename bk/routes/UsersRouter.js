@@ -1,6 +1,6 @@
 import express from 'express'
 import UserController from '../controllers/UsersController.js'
-import { verifyToken } from '../middlewares/VerifyToken.js'
+import { verifyToken } from '../middlewares/verifyToken.js'
 // import { refreshToken } from '../controllers/RefreshToken.js'
 const UserControllerInstace = new UserController()
 const router = express.Router()

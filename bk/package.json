@@ -1,0 +1,55 @@
+{
+  "name": "baileys-api",
+  "description": "Simple RESTful WhatsApp API",
+  "private": true,
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "start": "nodemon node ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ookamiiixd/baileys-api.git"
+  },
+  "author": "ookamiiixd <ookamiiixd@gmail.com>",
+  "bugs": {
+    "url": "https://github.com/ookamiiixd/baileys-api/issues"
+  },
+  "homepage": "https://github.com/ookamiiixd/baileys-api#readme",
+  "engines": {
+    "node": ">=14.5.0"
+  },
+  "dependencies": {
+    "@adiwajshing/baileys": "^4.2.0",
+    "@adiwajshing/keyed-db": "^0.2.4",
+    "bcrypt": "^5.1.0",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.2",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-validator": "^6.15.0",
+    "generate-api-key": "^1.0.2",
+    "joi": "^17.8.4",
+    "jsonwebtoken": "^9.0.0",
+    "morgan": "^1.10.0",
+    "mysql": "^2.18.1",
+    "mysql2": "^3.1.2",
+    "node-cleanup": "^2.1.2",
+    "openai": "^3.1.0",
+    "pino": "^7.10.0",
+    "qrcode": "^1.5.0",
+    "qrcode-terminal": "^0.12.0",
+    "sequelize": "^6.29.0",
+    "socket.io": "^4.6.1",
+    "sqlite3": "^5.1.6"
+  },
+  "devDependencies": {
+    "eslint": "^8.5.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-config-xo": "^0.39.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "prettier": "^2.5.1"
+  }
+}

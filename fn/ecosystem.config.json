@@ -1,0 +1,14 @@
+{
+  "apps": [
+    {
+      "name": "nextjs-app",
+      "script": "node_modules/next/dist/bin/next",
+      "args": "start -p 3000",
+      "cwd": "/home/v3.gigades.id/node_core/fn",
+      "env": {
+        "NODE_ENV": "production",
+        "PORT": 3000
+      }
+    }
+  ]
+}

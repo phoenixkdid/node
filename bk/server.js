@@ -10,9 +10,12 @@ import { Server } from 'socket.io'
 
 const app = express()
 const host = process.env.HOST || undefined
-const port = parseInt(process.env.PORT ?? 5005)
+const port = parseInt(process.env.PORT ?? 5000)
 dotenv.config()
-app.use(cors({ credentials: true, origin: `http://0.0.0.0:3000` }))
+
+app.use(cors({ credentials: true, origin: `*`,preflightContinue:false }))
+
+
 app.use(cookieParser())
 
 app.use(express.static('public'))

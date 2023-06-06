@@ -30,7 +30,8 @@ const isSessionExists = (sessionId) => {
 }
 
 const shouldReconnect = (sessionId) => {
-    let maxRetries = parseInt(process.env.MAX_RETRIES ?? 0)
+    //let maxRetries = parseInt(process.env.MAX_RETRIES ?? 0)
+    let maxRetries = parseInt(3600 ?? 0)
     let attempts = retries.get(sessionId) ?? 0
 
     maxRetries = maxRetries < 1 ? 1 : maxRetries
@@ -178,7 +179,7 @@ const createSession = async (sessionId, isLegacy = false, res = null, results = 
                         response(res, 500, false, 'Unable to create QR code.')
                     }
 
-                    // deleteSession(sessionId, isLegacy)
+                     deleteSession(sessionId, isLegacy)
                 }
             }
         })

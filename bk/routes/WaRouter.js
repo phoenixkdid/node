@@ -8,8 +8,9 @@ const router = express.Router()
 
 router.post('/new-session', verifyToken, RouterWaController?.newSession)
 router.get('/get-session', verifyToken, RouterWaController?.readSession)
-router.post('/sendText', verifyTokenSession, RouterWaController?.sendText)
+router.post('/sendText', RouterWaController?.sendTextV2)
+router.post('/sendMsg', RouterWaController?.sendMsg)
 
-router.post('/viewSession', verifyTokenSession, RouterWaController?.viewSession)
+router.post('/viewSession', RouterWaController?.viewSession)
 
 export default router
